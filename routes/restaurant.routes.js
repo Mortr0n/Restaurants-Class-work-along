@@ -10,7 +10,7 @@ module.exports = (app) => {
 
     // Next remove the old temporary app.get from above and app.get the healthcheckController
     app.get("/api/healthcheck", restaurantController.healthcheckController);
-    app.post('/api/restaurant/', restaurantController.createNewRestaurant);
+    app.post('/api/restaurant', restaurantController.createNewRestaurant);
     app.get('/api/restaurant', restaurantController.findAllRestaurants);
     // the ones needing ID must come after the non id ones, specifically the GET one
     app.get('/api/restaurant/:id', restaurantController.findOneRestaurant);

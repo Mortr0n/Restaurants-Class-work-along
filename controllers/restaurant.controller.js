@@ -18,7 +18,7 @@ const createNewRestaurant = (req, res) => {
     })
     // the class way of the errors.  setting the page status to 400
     // Need this way for validations
-    .catch((err) => res.status(400).json({ errMessage: err }));
+    .catch((err) => res.status(400).json(err));
 };
 
 const findAllRestaurants = (req, res) => {
